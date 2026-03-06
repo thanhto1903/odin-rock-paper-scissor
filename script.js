@@ -11,3 +11,21 @@ function getComputerChoice() {
     console.log("scissors");
   }
 }
+
+function getHumanChoice() {
+  let humanChoice = prompt("Choose rock, paper or scissors");
+  let humanChoiceInt;
+  console.log(humanChoice);
+  if (humanChoice === "rock") {
+    humanChoiceInt = 0;
+    console.log("Human chose rock");
+  } else if (humanChoice === "paper") {
+    humanChoiceInt = 1;
+    console.log("Human chose paper");
+  } else {
+    humanChoiceInt = 2;
+    console.log("Human chose scissors");
+  }
+}
+
+getHumanChoice();
