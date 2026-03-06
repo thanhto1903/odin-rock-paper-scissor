@@ -6,28 +6,28 @@ function getComputerChoice() {
   let randomInt = Math.floor(Math.random() * 3);
   //   console.log(randomInt); For test return randomInt
   if (randomInt === 0) {
-    console.log("rock");
+    // console.log("rock");
+    return "rock";
   } else if (randomInt === 1) {
-    console.log("paper");
+    // console.log("paper");
+    return "paper";
   } else {
-    console.log("scissors");
+    // console.log("scissors");
+    return "scissors";
   }
 }
 
 function getHumanChoice() {
   let humanChoice = prompt("Choose rock, paper or scissors");
-  let humanChoiceInt;
   console.log(humanChoice);
   if (humanChoice === "rock") {
-    humanChoiceInt = 0;
     console.log("Human chose rock");
   } else if (humanChoice === "paper") {
-    humanChoiceInt = 1;
     console.log("Human chose paper");
   } else {
-    humanChoiceInt = 2;
     console.log("Human chose scissors");
   }
+  return humanChoice;
 }
 
 function playRound(humanChoice, ComputerChoice) {
@@ -58,8 +58,3 @@ function playRound(humanChoice, ComputerChoice) {
     console.log("You lose! Rock beats Scissors");
   }
 }
-
-const humanSelection = "SCissors";
-const computerSelection = "scissors";
-
-playRound(humanSelection, computerSelection);
