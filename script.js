@@ -6,20 +6,19 @@ function getComputerChoice() {
   let randomInt = Math.floor(Math.random() * 3);
   //   console.log(randomInt); For test return randomInt
   if (randomInt === 0) {
-    // console.log("rock");
+    console.log("Comp chose rock");
     return "rock";
   } else if (randomInt === 1) {
-    // console.log("paper");
+    console.log("Comp chose paper");
     return "paper";
   } else {
-    // console.log("scissors");
+    console.log("Comp chose scissors");
     return "scissors";
   }
 }
 
 function getHumanChoice() {
   let humanChoice = prompt("Choose rock, paper or scissors");
-  console.log(humanChoice);
   if (humanChoice === "rock") {
     console.log("Human chose rock");
   } else if (humanChoice === "paper") {
