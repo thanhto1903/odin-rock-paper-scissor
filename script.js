@@ -30,4 +30,36 @@ function getHumanChoice() {
   }
 }
 
-getHumanChoice();
+function playRound(humanChoice, ComputerChoice) {
+  let lowercaseHumanChoice = humanChoice.toLowerCase();
+  if (
+    (lowercaseHumanChoice === "rock" && ComputerChoice === "rock") ||
+    (lowercaseHumanChoice === "paper" && ComputerChoice === "paper") ||
+    (lowercaseHumanChoice === "scissors" && ComputerChoice === "scissors")
+  ) {
+    console.log("Draw!!!");
+  } else if (lowercaseHumanChoice === "rock" && ComputerChoice === "paper") {
+    console.log("You lose! Paper beats Rock");
+  } else if (lowercaseHumanChoice === "rock" && ComputerChoice === "scissors") {
+    console.log("You win! Rock beats Scissors");
+  } else if (lowercaseHumanChoice === "paper" && ComputerChoice === "rock") {
+    console.log("You win! Paper beats Rock");
+  } else if (
+    lowercaseHumanChoice === "paper" &&
+    ComputerChoice === "scissors"
+  ) {
+    console.log("You lose! Scissors beats Paper");
+  } else if (
+    lowercaseHumanChoice === "scissors" &&
+    ComputerChoice === "paper"
+  ) {
+    console.log("You win! Scissors beats Paper");
+  } else if (lowercaseHumanChoice === "scissors" && ComputerChoice === "rock") {
+    console.log("You lose! Rock beats Scissors");
+  }
+}
+
+const humanSelection = "SCissors";
+const computerSelection = "scissors";
+
+playRound(humanSelection, computerSelection);
