@@ -72,11 +72,11 @@ function playGame() {
     }
   }
 
-  for (i = 0; i < 5; i++) {
-    playRound(getHumanChoice(), getComputerChoice());
-  }
-  console.log(humanScore);
-  console.log(computerScore);
+  // for (i = 0; i < 5; i++) {
+  //   playRound(getHumanChoice(), getComputerChoice());
+  // }
+  // console.log(humanScore);
+  // console.log(computerScore);
 
   if (humanScore > computerScore) {
     console.log("You win the game!");
