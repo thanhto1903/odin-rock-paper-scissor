@@ -30,9 +30,19 @@ function getHumanChoice() {
 function playGame() {
   let humanScore = 0;
   let computerScore = 0;
+  let gameActive = true;
 
   function playRound(humanChoice, ComputerChoice) {
     let lowercaseHumanChoice = humanChoice.toLowerCase();
+
+    if (humanScore > 5 || computerScore > 5) {
+      gameActive = false;
+    }
+
+    if (gameActive === false) {
+      return 0;
+    }
+
     if (
       (lowercaseHumanChoice === "rock" && ComputerChoice === "rock") ||
       (lowercaseHumanChoice === "paper" && ComputerChoice === "paper") ||
