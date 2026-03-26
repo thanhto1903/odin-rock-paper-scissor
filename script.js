@@ -70,6 +70,14 @@ function playGame() {
       console.log("You lose! Rock beats Scissors");
       computerScore++;
     }
+    updateScoreDisplay();
+  }
+
+  function updateScoreDisplay() {
+    let humanScoreRef = document.querySelector("#humanScore");
+    let compScoreRef = document.querySelector("#compScore");
+    humanScoreRef.textContent = "Human's score:" + humanScore;
+    compScoreRef.textContent = "Comp's score:" + computerScore;
   }
 
   // for (i = 0; i < 5; i++) {
@@ -96,8 +104,6 @@ function playGame() {
     const roundResult = document.querySelector("#round-result");
     roundResult.textContent = "Sorry, you losee!";
   }
-  const roundResult = document.querySelector("#round-result");
-  roundResult.appendChild(resultText);
 }
 
 playGame();
