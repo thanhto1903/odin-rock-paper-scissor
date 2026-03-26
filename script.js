@@ -90,10 +90,14 @@ function playGame() {
   });
 
   if (humanScore > computerScore) {
-    console.log("You win the game!");
+    const roundResult = document.querySelector("#round-result");
+    roundResult.textContent = "You win the game!";
   } else {
-    console.log("Sorry, you losee!");
+    const roundResult = document.querySelector("#round-result");
+    roundResult.textContent = "Sorry, you losee!";
   }
+  const roundResult = document.querySelector("#round-result");
+  roundResult.appendChild(resultText);
 }
 
 playGame();
