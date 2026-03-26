@@ -78,6 +78,17 @@ function playGame() {
   // console.log(humanScore);
   // console.log(computerScore);
 
+  const choices = document.querySelector(".btn-choices");
+  choices.addEventListener("click", (event) => {
+    if (event.target.id === "rock-btn") {
+      playRound("rock", getComputerChoice());
+    } else if (event.target.id === "paper-btn") {
+      playRound("paper", getComputerChoice());
+    } else {
+      playRound("scissors", getComputerChoice());
+    }
+  });
+
   if (humanScore > computerScore) {
     console.log("You win the game!");
   } else {
