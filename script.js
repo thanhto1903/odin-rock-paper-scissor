@@ -13,17 +13,18 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice() {
-  let humanChoice = prompt("Choose rock, paper or scissors");
-  if (humanChoice === "rock") {
-    console.log("Human chose rock");
-  } else if (humanChoice === "paper") {
-    console.log("Human chose paper");
-  } else {
-    console.log("Human chose scissors");
-  }
-  return humanChoice;
-}
+//Not needed anymore
+// function getHumanChoice() {
+//   let humanChoice = prompt("Choose rock, paper or scissors");
+//   if (humanChoice === "rock") {
+//     console.log("Human chose rock");
+//   } else if (humanChoice === "paper") {
+//     console.log("Human chose paper");
+//   } else {
+//     console.log("Human chose scissors");
+//   }
+//   return humanChoice;
+// }
 
 function playGame() {
   let humanScore = 0;
