@@ -107,6 +107,10 @@ function playGame() {
     }
   });
 
+  announceWinner();
+}
+
+function announceWinner(humanScore, computerScore) {
   if (humanScore > computerScore) {
     const roundResult = document.querySelector("#round-result");
     roundResult.textContent = "You win the game!";
